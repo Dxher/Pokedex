@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=deivce-width, initial-scale=1.0">
+        <title>Pokedex </title>
+
+        <link rel="stylesheet" href="pokedex.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="pokedex.js"></script>
+
+    </head>
+
+    <body>
+        <!--Top of screen, shows the pokedex-->
+        <div class="toggle-btn" onclick="show()">
+                <p><b>CLICK TO SHOW POKEDEX</b></p>  
+                <span></span>
+                <span></span>
+                <span></span> 
+        </div>
+        <div id="pokebox">
+
+            <!--Left side, display pokemon info-->
+            <div id="pokemon-info">
+                <img id="pokemon-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+                <div id="pokemon-types">
+                    <span class="type-box grass">GRASS</span> <span class="type-box poison">POISON</span>
+                </div>
+                <div id="pokemon-description"></div>
+            </div>
+            <!--Right side, display pokemon list and search-->
+            <div id="pokemon-names">
+                <div class="search-container">
+                    <form name="pokename" onsubmit="return false" >
+                      <input type="text" name="search" id="searchbar" placeholder="Search.." />
+                      <button type="submit" onclick="searchPoke()"><i class="fa fa-search"></i></button>
+                      <button onclick="reset2()"><i class="fa fa-refresh"></i></button>
+                    </form>
+                </div>
+                <div id="pokemon-list"></div>
+            </div>
+        </div>
+    </body>
+</html>
