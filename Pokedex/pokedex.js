@@ -100,3 +100,14 @@ function reset2() {
     } 
 }
 
+/* attempted to add a filter while seaching so that as you search you only see the pokemons with those letters
+searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+
+    const filteredCharacters = pokeCharacters.filter((pokemon) => {
+        return (
+            pokemonName.toLowerCase().includes(searchString) ||
+        );
+    });
+    displayCharacters(filteredCharacters);
+});*/
